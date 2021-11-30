@@ -4,7 +4,9 @@ set -ex
 
 dotfiles_dir=~/dotfiles
 
-sudo chsh -s /bin/bash
+if [[ "$SPIN" ]]; then
+  sudo chsh -s /bin/bash spin
+fi
 
 ln -sf ${dotfiles_dir}/.inputrc ~/.inputrc
 
