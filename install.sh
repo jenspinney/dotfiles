@@ -4,7 +4,7 @@ set -ex
 
 dotfiles_dir=~/dotfiles
 
-chsh -s /bin/bash
+sudo chsh -s /bin/bash
 
 ln -sf ${dotfiles_dir}/.inputrc ~/.inputrc
 
