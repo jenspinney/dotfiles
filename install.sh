@@ -21,7 +21,7 @@ if [[ ! -d ~/.bash_it ]]; then
 fi
 
 if ! grep --quiet "path=${dotfiles_dir}/gitconfig" "~/.gitconfig"; then
-cat << EOF >> "~/.gitconfig"
+cat << EOF >> ~/.gitconfig
 [include]
   path=${dotfiles_dir}/gitconfig
 EOF
