@@ -10,10 +10,7 @@ fi
 
 ln -sf "${dotfiles_dir}/.inputrc" ~/.inputrc
 ln -sf "${dotfiles_dir}/bash/.bash_profile" ~/.bash_profile
-
-if ! grep --quiet BASH_IT_CUSTOM ~/.bashrc; then
-  echo "export BASH_IT_CUSTOM=~/dotfiles/bash/bash_it_custom/" >> ~/.bashrc
-fi
+ln -sf "${dotfiles_dir}/bash/.bashrc" ~/.bashrc
 
 if [[ ! -d ~/.bash_it ]]; then
   git clone --depth=1 https://github.com/Bash-it/bash-it.git ~/.bash_it
